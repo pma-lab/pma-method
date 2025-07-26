@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網站導航</title>
+    <style>
+        body {
+            font-family: 'Noto Sans CJK TC', 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px 15px;
+            background-color: #ecf0f1;
+            color: #333;
+            line-height: 1.6;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li {
+            margin-bottom: 5px;
+        }
+        ul ul { /* Sub-menu styling */
+            padding-left: 15px;
+            margin-top: 5px;
+            border-left: 2px solid #ccc;
+        }
+        a {
+            display: block;
+            padding: 8px 10px;
+            text-decoration: none;
+            color: #34495e;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            border-radius: 4px;
+        }
+        a:hover {
+            background-color: #dce4e6;
+            color: #2c3e50;
+        }
+        .section-title {
+            font-size: 1.1em;
+            color: #2c3e50;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            padding-left: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .main-link {
+            font-size: 1.2em;
+            color: #e74c3c; /* Emphasize main links */
+        }
+        .main-link:hover {
+            color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="pma-rc1.html" target="contentFrame" class="main-link">首頁 (方法論介紹與精華)</a></li>
+        
+        <li><div class="section-title">P&MA 方法論 (主專區)</div>
+            <ul>
+                <li><a href="pma-rc1.html" target="contentFrame">RC1 正文</a></li>
+                <li><a href="glossary.html" target="contentFrame">術語索引 (Glossary)</a></li>
+                <li><a href="changelog.html" target="contentFrame">版本紀錄 (Changelog)</a></li>
+                <li><a href="faq.html" target="contentFrame">方法論 Q&A</a></li>
+            </ul>
+        </li>
+
+        <li><div class="section-title">關於我們</div>
+            <ul>
+                <li><a href="about-project.html" target="contentFrame">專案簡介</a></li>
+                <li><a href="cgc-roles.html" target="contentFrame">CGC 角色設定</a></li>
+                <li><a href="your-role.html" target="contentFrame">你的角色 (AIC / ATT)</a></li>
+            </ul>
+        </li>
+
+        <li><div class="section-title">應用與洞察 (短篇文／精華)</div>
+            <ul>
+                <li><a href="ai-roles-comparison.html" target="contentFrame">AI 職能對照／未來轉型文章</a></li>
+                <li><a href="dialogue-highlights.html" target="contentFrame">精華對話重演／副本摘要</a></li>
+                <li><a href="future-analysis.html" target="contentFrame">未來分析／社群討論</a></li>
+            </ul>
+        </li>
+
+        <li><a href="contact.html" target="contentFrame" class="main-link">聯絡我們</a></li>
+    </ul>
+
+    <div style="margin-top: 30px; font-size: 0.9em; border-top: 1px solid #ccc; padding-top: 15px;">
+        <div class="section-title" style="border-left: none; padding-left: 0; margin-top: 0; margin-bottom: 0.5em;">法律與授權</div>
+        <ul>
+            <li><a href="privacy-policy.html" target="contentFrame">隱私權政策</a></li>
+            <li><a href="original-statement.html" target="contentFrame">原創權聲明</a></li>
+            <li><a href="terms-of-use.html" target="contentFrame">使用條款／免責聲明</a></li>
+        </ul>
+    </div>
+</body>
+</html>
