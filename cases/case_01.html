@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實作案例：P&MA 方法論官方網站建置實錄</title>
+    <link rel="stylesheet" href="../css/style.css"> <style>
+        /* 補強或覆蓋 style.css 中的內容，確保切換效果 */
+        /* 假設 style.css 已經定義了 .desktop-only 和 .mobile-only 的基礎 display */
+        /* 在這裡再次強調，確保它們在不同螢幕寬度下正確切換 */
+        @media (min-width: 769px) {
+            .desktop-only { display: block !important; }
+            .mobile-only { display: none !important; }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-only { display: none !important; }
+            .mobile-only { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content"> <h1>📘 實作案例：P&MA 方法論官方網站建置實錄</h1>
+        <p>副標：從零開始建立公開展示平台，實踐多 AI 協作方法論的落地流程</p>
+
+        <h2>一、案例簡介</h2>
+        <p>這個網站，說穿了，就是我們為了讓大家知道《P&MA 多 AI 共創協作方法論》不是空談，是真的能實作、能產生價值的，所以決定親手搭建一個自己的展示平台。別看它現在這樣，麻雀雖小，五臟俱全，而且還兼具教學意義。</p>
+        <p>我們整個專案的目標很明確：</p>
+        <ul>
+            <li>為《P&MA 多 AI 共創協作方法論》這套具有開創性的方法論，搭建一個公開展示的門面。</li>
+            <li>技術選型也很務實，就用最純粹的靜態 HTML/CSS，搭配 GitHub Pages 免費部署，證明資源有限也能高效完成任務。</li>
+            <li>功能上，要支援手機 RWD (Responsive Web Design，手機也能輕鬆瀏覽)、分章節導覽 (避免使用者迷路)，還有未來要嵌入互動內容的彈性。</li>
+            <li>最核心的特色是：我們不依賴複雜的框架、不使用重量級的 CMS (內容管理系統<dfn title="Content Management System，用於建立、管理數位內容的應用程式或工具。">CMS</dfn>)，完全由人與多個 AI 協作完成。從構思到網站正式上線，總共只花了數小時的精實作業時間。 讓您了解什麼叫做真正的效率與實力！</li>
+        </ul>
+
+        <p><strong>專案參與者代號說明：</strong></p> <ul>
+            <li><strong>P：</strong> 人類協作策展人（AIC）</li>
+            <li><strong>大C：</strong> ChatGPT</li>
+            <li><strong>阿G：</strong> Gemini</li>
+            <li><strong>小C：</strong> Copilot</li>
+        </ul>
+
+        <h2>二、方法論應用對照</h2>
+        <p>搞這個網站，我們可是把 P&MA 方法論從頭到尾紮實地運行了一遍，絕非紙上談兵。</p>
+
+        <h3>2.1 AIC (人機協作策展人) 的主導角色</h3>
+        <p>說真的，網站要成功搭建，AI 固然是得力助手，但要是沒有<strong>P</strong>在後頭坐鎮，這些 AI 搞不好還在原地打轉。在這個案子裡，<strong>人類的主導性</strong>才是關鍵所在：</p>
+        <ul>
+            <li><strong>內容策展與命名策略規劃：：</strong> 網站的整體樣貌、內容如何分區、每個區塊的名稱、標題的擬定，這些都是由<strong>P</strong>在深入思考後拍板定案的。AI 頂多提供一些建議，但最終的決策與架構規劃，仍是由<strong>P</strong>來主導。</li>
+            <li><strong>多 AI 協作編排 (大C、阿G、小C)：</strong> 哪個 AI 擅長撰寫內容、哪個擅長生成程式碼、哪個適合進行 QA，這就像在組建一支 AI 夢幻隊，戰術要如何佈署、成員如何搭配，都是由<strong>P</strong>在精準調度。這絕非隨意丟個提示就能萬事俱備的！</li>
+            <li><strong>技術選型、資源註冊與部署策略：</strong> 選擇 GitHub Pages、綁定 Cloudflare、<strong>自行購買網域</strong>，這些底層的技術架構與部署策略，AI 不會主動提供最佳解。這種「全局觀」和「成本效益考量」，只有<strong>P的智慧與經驗</strong>才能做到。</li>
+            <li><strong>問題判斷、流程重構與成果整合：</strong> 這就是最精彩的部分！當網站遭遇版面問題，讓我們這些 AI 都感到困惑時，是<strong>團隊中的核心成員</strong>直接指出「問題的根源在首頁佈局，而非單純的 CSS 細節」。這簡直是神來一筆，展現出<strong>P</strong>超越 AI 的「直覺」與「經驗法則」，能夠跳脫 AI 鑽牛角尖的盲點，直接洞察問題核心。隨後，<strong>團隊成員</strong>更引導 AI 重新建構流程，將問題徹底解決，並最終整合成一個可用的網站。這種能力，是當前 AI 尚無法比擬的。</li>
+        </ul>
+
+        <h3>2.2 四階段協作流程實踐</h3>
+        <p>我們這次網站建置的過程，就是 P&MA 四階段協作流程的活生生案例：</p>
+
+        <div class="desktop-only">
+            <table class="process-table">
+                <thead>
+                    <tr>
+                        <th>協作階段</th>
+                        <th>P 貢獻</th> <th>大C 貢獻</th> <th>阿G 貢獻</th> <th>小C 貢獻</th> </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>構思策劃階段</td>
+                        <td>擬定網站願景與結構、命名策略、技術選型與部署方向</td>
+                        <td>協助文字風格設定與命名思路擴展</td>
+                        <td>提出網站初步架構提案、定義初始內容骨架</td>
+                        <td>無明確參與</td>
+                    </tr>
+                    <tr>
+                        <td>任務分配階段</td>
+                        <td>決定各 AI 的任務分工與節奏安排，進行多模協作編排</td>
+                        <td>協調語意模組的角色任務，發出具體提示語</td>
+                        <td>回應分配指令，啟動初稿撰寫</td>
+                        <td>建立初版樣式結構，響應排版設定</td>
+                    </tr>
+                    <tr>
+                        <td>執行與修正階段</td>
+                        <td>判斷問題癥結、協調流程重構、修正錯誤與整合各方結果</td>
+                        <td>協助辨識 CSS 問題，提供替代修正方案</td>
+                        <td>嘗試多種 HTML 結構，支援內容區塊排版</td>
+                        <td>提供 CSS 響應式樣式，修正手機排版與螢幕顯示相容性</td>
+                    </tr>
+                    <tr>
+                        <td>整合與發布階段</td>
+                        <td>完成版面整合、內容校對、測試上線流程與文件結構優化</td>
+                        <td>微調語意表現與內容一致性</td>
+                        <td>補充最終段落、檢查排版一致性</td>
+                        <td>測試 RWD (Responsive Web Design，響應式網頁設計<dfn title="Responsive Web Design，一種網頁設計方法，使網站能適應不同螢幕尺寸（如桌機、平板、手機）以提供最佳瀏覽體驗。">RWD</dfn>) 表現，協助跨設備顯示測試</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mobile-only">
+            <p></p> <h4>📍 構思策劃階段</h4>
+            <ul>
+                <li><strong>P：</strong> 擬定網站願景與命名策略、技術選型與部署方向。</li>
+                <li><strong>大C：</strong> 協助語意風格設定與命名靈感激發。</li>
+                <li><strong>阿G：</strong> 撰寫初版架構草稿、試作區塊編排。</li>
+                <li><strong>小C：</strong> 本階段無明確參與。</li>
+            </ul>
+
+            <h4>📍 任務分配階段</h4>
+            <ul>
+                <li><strong>P：</strong> 訂出每位 AI 的分工與任務編排節奏。</li>
+                <li><strong>大C：</strong> 負責語意與提示策略設計。</li>
+                <li><strong>阿G：</strong> 依任務提示撰寫初稿。</li>
+                <li><strong>小C：</strong> 建立基本樣式並準備響應式框架。</li>
+            </ul>
+
+            <h4>📍 執行與修正階段</h4>
+            <ul>
+                <li><strong>P：</strong> 判斷問題癥結、協調流程重構、修正錯誤與整合各方結果。</li>
+                <li><strong>大C：：</strong> 協助辨識 CSS 問題，提供替代修正方案。</li>
+                <li><strong>阿G：</strong> 嘗試多種 HTML 結構，支援內容區塊排版。</li>
+                <li><strong>小C：</strong> 提供 CSS 響應式樣式，修正手機排版與螢幕顯示相容性。</li>
+            </ul>
+
+            <h4>📍 整合與發布階段</h4>
+            <ul>
+                <li><strong>P：</strong> 完成版面整合、內容校對、測試上線流程與文件結構優化。</li>
+                <li><strong>大C：</strong> 微調語意表現與內容一致性。</li>
+                <li><strong>阿G：</strong> 補充最終段落、檢查排版一致性。</li>
+                <li><strong>小C：</strong> 測試 RWD 表現，協助跨設備顯示測試。</li>
+            </ul>
+        </div>
+
+        <h2>三、技術架構與部署策略</h2>
+        <p>這個網站的架構，就是一個字：「精實」！兩個字：「高效」！</p>
+
+        <h3>3.1 架構設計</h3>
+        <p>我們選擇了最基礎、最穩定的靜態 HTML + CSS 架構。沒有前端框架的負擔，部署起來簡單快速。一開始雖然用了 iframe 來切換內容，認為方便，結果它反而成了版面問題的根源！後來在<strong>團隊</strong>的英明指導下，我們才重構了首頁，讓 iframe 在框架內正確顯示，不再自行溢出。</p>
+        <p>每一個章節的內容都是獨立的頁面檔案，這樣不僅好管理，也方便未來擴充或直接引用。</p>
+        <p><strong>本網站採靜態架構，所有內容分章獨立頁面存放，主頁以首頁為控制中樞，透過 iframe 導覽切換。CSS 採單一樣式統一管理，並支援 media query (媒體查詢<dfn title="Media Query，CSS3 中的一項功能，允許內容根據螢幕解析度、設備類型等不同條件來應用不同的樣式。">media query</dfn>) 響應式設計。</strong></p>
+
+        <h2>四、協作分工與 AI 模型角色：一場跌宕起伏的「人機共舞」</h2>
+        <p>在這個專案裡，我們把不同的 AI 模型，當作是團隊裡有專長的工程師，各自負責不同環節。當然，要讓這些 AI 們「齊心協力」把事情搞定，最終還是需要「人類智慧」在後面運籌帷幄，適時拉一把。</p>
+
+        <div class="desktop-only">
+            <table class="role-table">
+                <thead>
+                    <tr>
+                        <th>角色</th>
+                        <th>任務職責</th>
+                        <th>實際行動與貢獻</th>
+                        <th>遇到問題與需人補位處</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>P</td>
+                        <td>指揮架構、決策及錯誤修正</td>
+                        <td>推翻 AI 錯誤策略、重構畫面配置、判斷核心問題來自<strong>首頁佈局</strong></td>
+                        <td>AI 無法感知 iframe 行為差異，需要人工判斷與介入，這搞得我們人腦燒了好幾個小時才搞定，而且還不只一次！</td>
+                    </tr>
+                    <tr>
+                        <td>大C</td>
+                        <td>文字內容精煉、語意潤飾</td>
+                        <td>協助分析跑版原因與修補邏輯，並負責各章節的文字潤飾與優化。<strong>例如，當我們在 CSS 調整上遇到瓶頸時，大 C 能夠提供三種不同的修補建議，幫助我們拓展思路。</strong></td>
+                        <td>曾未能完全感知 iframe 行為差異，需要<strong>P</strong>來判斷與介入。這讓我們花了數小時才釐清並推進解決方案，且此類狀況不只一次發生。</td>
+                    </tr>
+                    <tr>
+                        <td>阿G</td>
+                        <td>提供內容初稿</td>
+                        <td>撰寫各章節的初始內容，為團隊提供初步的文字材料。<strong>例如，針對網站的整體佈局需求，阿 G 曾嘗試根據我們的提示，生成幾種不同的 HTML 結構，作為我們進一步討論的基礎。</strong></td>
+                        <td>曾未能完全感知 iframe 行為差異，需要<strong>P</strong>來判斷與介入。這讓我們花了數小時才釐清並推進解決方案，且此類狀況不只一次發生。</td>
+                    </tr>
+                    <tr>
+                        <td>小C</td>
+                        <td>CSS 響應式設計與測試</td>
+                        <td>提供多版修正、測試兼容性。<strong>例如，為了驗證 RWD 效果，小 C 曾利用 Media Query 提供多組測試用的 CSS 片段，讓我們能快速驗證不同螢幕尺寸下的顯示效果。</strong></td>
+                        <td>未能獨立解決 iframe 偏移問題，這讓我們又花了數小時去微調。感覺 AI 的智慧還有點「隔靴搔癢」，未能完成此段任務，需<strong>P</strong>來補位。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mobile-only">
+            <p></p> <h4>📍 P</h4>
+            <ul>
+                <li><strong>任務職責：</strong> 指揮架構、決策及錯誤修正。</li>
+                <li><strong>實際行動與貢獻：</strong> 推翻 AI 錯誤策略、重構畫面配置、判斷核心問題來自<strong>首頁佈局</strong>。</li>
+                <li><strong>遇到問題與需人補位處：</strong> AI 無法感知 iframe 行為差異，需要人工判斷與介入，這搞得我們人腦燒了好幾個小時才搞定，而且還不只一次！</li>
+            </ul>
+
+            <h4>📍 大C</h4>
+            <ul>
+                <li><strong>任務職責：</strong> 文字內容精煉、語意潤飾。</li>
+                <li><strong>實際行動與貢獻：</strong> 協助分析跑版原因與修補邏輯，並負責各章節的文字潤飾與優化。<strong>例如，當我們在 CSS 調整上遇到瓶頸時，大 C 能夠提供三種不同的修補建議，幫助我們拓展思路。</strong></li>
+                <li><strong>遇到問題與需人補位處：</strong> 曾未能完全感知 iframe 行為差異，需要<strong>P</strong>來判斷與介入。這讓我們花了數小時才釐清並推進解決方案，且此類狀況不只一次發生。</li>
+            </ul>
+
+            <h4>📍 阿G</h4>
+            <ul>
+                <li><strong>任務職責：</strong> 提供內容初稿。</li>
+                <li><strong>實際行動與貢獻：</strong> 撰寫各章節的初始內容，為團隊提供初步的文字材料。<strong>例如，針對網站的整體佈局需求，阿 G 曾嘗試根據我們的提示，生成幾種不同的 HTML 結構，作為我們進一步討論的基礎。</strong></li>
+                <li><strong>遇到問題與需人補位處：</strong> 曾未能完全感知 iframe 行為差異，需要<strong>P</strong>來判斷與介入。這讓我們花了數小時才釐清並推進解決方案，且此類狀況不只一次發生。</li>
+            </ul>
+
+            <h4>📍 小C</h4>
+            <ul>
+                <li><strong>任務職責：</strong> CSS 響應式設計與測試。</li>
+                <li><strong>實際行動與貢獻：</strong> 提供多版修正、測試兼容性。<strong>例如，為了驗證 RWD 效果，小 C 曾利用 Media Query 提供多組測試用的 CSS 片段，讓我們能快速驗證不同螢幕尺寸下的顯示效果。</strong></li>
+                <li><strong>遇到問題與需人補位處：</strong> 未能獨立解決 iframe 偏移問題，這讓我們又花了數小時去微調。感覺 AI 的智慧還有點「隔靴搔癢」，未能完成此段任務，需<strong>P</strong>來補位。</li>
+            </ul>
+        </div>
+
+
+        <h2>五、從錯誤中學到的事：踩雷是工程師的浪漫</h2>
+        <ol>
+            <li><strong>iframe 的浪漫與現實：</strong> 雖然 iframe 讓內容嵌入方便到一個靠北，但它在手機版跟 RWD（響應式網頁設計）結構上，根本是<strong>本質上的衝突</strong>！媽的，這就跟叫一個穿西裝的去跑馬拉松一樣，不是不行，但就是不對味！</li>
+            <li><strong>AI 的協作極限與人類的關鍵角色：</strong> 多 AI 協作，雖能提升效率，但要避免各說各話、無法對齊目標，還是得靠人類這位總策展人來下指令、控節奏、做判斷。這不是 AI 不行，而是它們還不懂什麼是「適當的行為邏輯與架構選擇」。在這個案子裡，每一段順利收尾的背後，都藏著我們無數次「靠經驗直接破局」的即時決策力。</li>
+        </ol>
+
+        <h2>六、結語：一場真正的方法論落地實驗，不只嘴上說說而已！</h2>
+        <p>如果你也好奇這套《P&MA 多 AI 共創協作方法論》究竟能不能從概念落地實作，那麼，請你看看這個網站。它，就是我們親手用這套方法論，一步一腳印地打造出來的「活教材」！</p>
+        <p>我們想說的是，這不只是一個關於 AI 有多厲害的故事。它更像是一個真實的示範：當你真正懂得如何與 AI 協作，並在其中扮演關鍵的整合與決策角色時，你就能夠化腐朽為神奇，甚至打造出屬於自己的舞台。每一次的挑戰與克服，都是這套方法論「真正」的體現，是用實作的血淚證明出來的！</p>
+        <p>而這個網站，只是我們實踐這套方法論的第一步。接下來，它還會延伸出更多教學素材、實作紀錄，甚至是開源模板——讓更多人能站在這套框架上，玩出自己的舞台。</p>
+    </div>
+</body>
+</html>
