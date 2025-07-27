@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>施工中 - P&MA 人與多AI共創協作方法論</title>
+    <meta name="description" content="本頁面目前正在施工中，敬請期待。">
+    <link rel="stylesheet" href="css/style.css"> 
+    <style>
+        /* 保持與其他內容頁面一致的風格，並在此處進行少量調整以置中文字 */
+        body {
+            display: flex; /* 使用 flexbox 讓內容垂直和水平居中 */
+            justify-content: center;
+            align-items: center;
+            /* 調整 min-height 以適應 iframe 內的內容高度，並考慮到主頁面 burger menu 的高度 */
+            min-height: calc(100vh - 50px - 40px); /* 假設主頁面有 50px 頂部導航和一些 margin/padding */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* 讓文字居中 */
+            /* 背景色、字體顏色和字體家族直接繼承 style.css */
+        }
+        
+        .main-content { 
+            max-width: 960px; 
+            margin: 20px auto;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* 讓內容在 main-content 內居中 */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 400px; /* 確保在內容少時也有足夠的高度 */
+        }
+
+        /* 沿用主網站的 h1 樣式，但移除多餘的邊界或調整以配合內容 */
+        .main-content h1 {
+            color: #2c3e50; /* 沿用主網站的 h1 顏色 */
+            font-size: 2.5em; /* 沿用主網站的 h1 字體大小 */
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #3498db; /* 沿用主網站的 h1 底線 */
+            padding-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 1.5em;
+            color: #333; /* 沿用主網站的字體顏色 */
+        }
+        .main-content .icon {
+            font-size: 3.5em;
+            color: #e67e22; /* 選擇一個醒目的顏色 */
+            margin-bottom: 0.3em;
+            display: block;
+        }
+        .main-content a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .main-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* 確保在 iframe 內部 body 不會產生過多的 margin/padding */
+        html { margin: 0; padding: 0; }
+
+        /* Mobile specific adjustments if needed for this page in iframe */
+        @media (max-width: 768px) {
+            .main-content {
+                margin-left: 15px; /* 調整左右邊距 */
+                margin-right: 15px;
+                padding: 20px;
+            }
+            .main-content h1 {
+                font-size: 1.8em;
+            }
+            .main-content p {
+                font-size: 1em;
+            }
+            .main-content .icon {
+                font-size: 3em;
+            }
+            body {
+                min-height: calc(100vh - 50px); /* 手機版只需考慮 burger menu 高度 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+        <h1>頁面施工中，敬請期待！</h1>
+        <p>我們正在努力建構更豐富的內容，很快就會與您見面。感謝您的耐心等待！</p>
+        <p><a href="javascript:history.back()">返回上一頁</a> 或 <a href="../index.html" target="_top">返回首頁</a></p>
+    </div>
+</body>
+</html>
