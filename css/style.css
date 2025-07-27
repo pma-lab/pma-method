@@ -1,0 +1,224 @@
+/* style.css - 配合新的 index.html 佈局 */
+
+/* Base styles - 全域設定，維持高度一致性 */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans CJK TC', 'Microsoft JhengHei', Arial, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f9f9f9;
+    box-sizing: border-box; /* 確保 padding 不增加寬度 */
+    height: 100%;
+    width: 100%; /* 確保佔滿整個寬度 */
+    overflow-x: hidden; /* 防止頁面出現水平滾動條 */
+}
+
+/* 確保所有元素都遵循 box-sizing: border-box */
+* {
+    box-sizing: border-box;
+}
+
+/* Main Content Container - 主要內容區的 RWD 優化 */
+.main-content { /* 所有內容頁面都會用這個 wrapper div */
+    max-width: 800px; /* 桌面版最大寬度 */
+    margin: 40px auto; /* 桌面版居中，上下 40px */
+    padding: 0 20px; /* 左右邊距 */
+    /* 強制所有長內容自動換行，避免溢出 */
+    word-break: break-word; /* 針對CJC文字尤其重要 */
+    overflow-wrap: break-word; /* 針對英文單字或URL */
+    -webkit-text-size-adjust: 100%; /* 防止移動設備自動調整文字大小 */
+    text-size-adjust: 100%;
+}
+
+/* Typography and Headings - 字體與標題 */
+h1, h2, h3, h4, h5, h6 { /* 統一標題字體樣式 */
+    color: #2c3e50;
+    line-height: 1.5;
+    word-break: break-word; /* 確保標題文字換行 */
+    overflow-wrap: break-word; /* 確保標題文字換行 */
+}
+h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+h2 {
+    font-size: 1.8em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5em;
+    margin-top: 2em;
+}
+h3 {
+    font-size: 1.4em;
+    margin-top: 1.5em;
+}
+p {
+    margin-bottom: 1em;
+    word-break: break-word; /* 確保段落文字換行 */
+    overflow-wrap: break-word; /* 確保段落文字換行 */
+}
+ul, ol {
+    list-style-type: disc; /* 預設圓點 */
+    margin-left: 20px;
+    margin-bottom: 1em;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+ol {
+    list-style-type: decimal; /* 有序列表預設數字 */
+}
+ul li, ol li {
+    margin-bottom: 0.5em;
+    word-break: break-word; /* 確保列表項文字換行 */
+    overflow-wrap: break-word; /* 確保列表項文字換行 */
+}
+strong {
+    font-weight: bold;
+    word-break: break-word; /* 確保 strong 標籤內的長文字也能換行 */
+    overflow-wrap: break-word; /* 確保 strong 標籤內的長文字也能換行 */
+}
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: -1em;
+    margin-bottom: 2em;
+}
+
+/* Notes List - 註解區塊 */
+.note-list {
+    margin-top: 3em;
+    border-top: 1px dashed #ccc;
+    padding-top: 1.5em;
+    font-size: 0.9em;
+    color: #666;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+.note-list li {
+    margin-bottom: 0.8em;
+    word-break: break-word; /* 確保註解列表項文字換行 */
+    overflow-wrap: break-word; /* 確保註解列表項文字換行 */
+}
+
+/* Links - 連結 */
+a {
+    color: #3498db;
+    text-decoration: none;
+    word-break: break-word; /* 確保連結文字換行 */
+    overflow-wrap: break-word; /* 確保連結文字換行 */
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Horizontal Rule - 分隔線 */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 3em 0;
+}
+
+/* Superscript - 上標 (用於註解) - 徹底移除所有可能的外框或樣式 */
+sup {
+    color: #e74c3c;
+    font-weight: bold;
+    vertical-align: super;
+    font-size: 0.7em;
+    line-height: 1;
+    /* 這次真的要強制清除所有可能影響視覺的預設樣式 */
+    border: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: default !important; /* 避免顯示手型游標 */
+}
+
+/* Images and Tables - 圖片與表格的響應式處理 */
+img {
+    max-width: 100%; /* 確保圖片不超出父容器 */
+    height: auto; /* 等比例縮放 */
+    display: block; /* 避免圖片下方多餘的空白 */
+    margin: 1em auto; /* 圖片居中 (如果需要) */
+}
+table {
+    width: 100%; /* 表格預設佔滿寬度 */
+    border-collapse: collapse; /* 合併邊框 */
+    margin-bottom: 1em;
+    /* 讓表格在窄螢幕下可以水平滾動，同時表格內的內容自動換行 */
+    display: block; /* 讓表格像區塊元素一樣處理，以便 overflow-x 生效 */
+    overflow-x: auto; /* 表格內容超出時顯示水平滾動條 */
+    -webkit-overflow-scrolling: touch; /* For smoother scrolling on iOS */
+}
+table th, table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+    white-space: normal; /* 讓單元格內的文字正常換行 */
+    word-break: break-word; /* 確保表格內文字換行 */
+    overflow-wrap: break-word; /* 確保表格內文字換行 */
+}
+table thead {
+    background-color: #f2f2f2;
+}
+
+
+/* Media Queries - 針對小螢幕的特定調整 */
+@media (max-width: 768px) { /* 這個斷點保持，涵蓋手機和平板 */
+    .main-content {
+        margin: 10px auto; /* 手機版上下邊距縮小 */
+        padding: 0 15px; /* <--- 這裡改了！左右邊距增加到 15px */
+    }
+    h1 {
+        font-size: 1.4em; /* 再縮小標題字體 */
+        /* 移除 margin-left/right，讓 padding 控制邊距 */
+        margin-left: 0; 
+        margin-right: 0;
+    }
+    h2 {
+        font-size: 1.1em; /* 再縮小標題字體 */
+        /* 移除 margin-left/right，讓 padding 控制邊距 */
+        margin-left: 0;
+        margin-right: 0;
+    }
+    h3 {
+        font-size: 1.0em; /* 再縮小標題字體，幾乎是內文大小 */
+        /* 移除 margin-left/right，讓 padding 控制邊距 */
+        margin-left: 0;
+        margin-right: 0;
+    }
+    p {
+        font-size: 0.88em; /* 段落字體再縮小一點點，確保可讀性 */
+    }
+    ul, ol {
+        margin-left: 8px; /* 手機版列表縮小縮排 */
+    }
+    ul li, ol li {
+        margin-bottom: 0.2em; /* 列表項行距再縮小 */
+    }
+    .note-list {
+        padding-top: 0.5em;
+        font-size: 0.78em; /* 註解列表字體再小一點 */
+    }
+    sup {
+        font-size: 0.45em; /* 手機版上標字體再小一點 */
+    }
+    table th, table td {
+        padding: 4px; /* 手機版表格內距再縮小 */
+        font-size: 0.8em; /* 手機版表格文字再縮小 */
+    }
+
+    /* 確保漢堡選單標題不會溢出 */
+    .burger-menu .title {
+        font-size: 0.7em; /* 再次縮小標題字體 */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: calc(100% - 60px); /* 給 icon 留點空間 */
+    }
+}
