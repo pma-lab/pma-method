@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/slnx.sqlite
+/.vs/ProjectSettings.json
+/.vs/pma-method/config/applicationhost.config
+/.vs/pma-method/config
