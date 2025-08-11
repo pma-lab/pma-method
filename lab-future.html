@@ -1,47 +1,81 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>未來願景｜發展藍圖 - P&MA 人與多AI共創實驗室</title>
-    <meta name="description" content="探討生成式AI語音技術的未來趨勢與P&MA的預研方向。">
-    <meta name="keywords" content="未來願景, 發展藍圖, P&MA, AI協作, 語音技術, 語氣經濟, 角色生態系, 語氣模組, 聲優轉型">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>未來願景｜發展藍圖 【MAOP】Phase I 研究備忘錄 - P&MA 人與多AI共創實驗室</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* 補強或覆蓋 style.css 中的內容，確保切換效果 */
+        /* 假設 style.css 已經定義了 .desktop-only 和 .mobile-only 的基礎 display */
+        /* 在這裡再次強調，確保它們在不同螢幕寬度下正確切換 */
+        @media (min-width: 769px) {
+            .desktop-only {
+                display: block !important;
+            }
+
+            .mobile-only {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .desktop-only {
+                display: none !important;
+            }
+
+            .mobile-only {
+                display: block !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="main-content">
-        <h1>🔮 未來願景｜發展藍圖</h1>
-        <p>隨著生成式 AI 的語音技術日趨成熟，語音模組不再只是單向的 TTS（Text-to-Speech），而是邁向更精緻的「語氣模組化」、「角色個性化」與「即時語音互動」的新階段。</p>
-        <p>我們相信，未來的聲音市場不僅是技術導向，更將成為 <strong>語氣經濟</strong> 與 <strong>角色生態系</strong> 的核心戰場。</p>
+        <h1>未來願景｜發展藍圖</h1>
+        <p class="subtitle">MAOP 的 Phase I 研究備忘。僅展示現階段可對外說明的結構輪廓；尚在驗證的設計與細節暫不公開，將視進展逐步補充。</p>
 
-        <h2>🧩 三大趨勢已浮現：</h2>
-        <ul>
-            <li><strong>語音模組商品化</strong>
-                <p>玩家可自由切換聲音角色、語氣風格與情境回應，語音不再是系統內建，而是可「選購下載」的個性資源。</p>
-            </li>
-            <li><strong>聲優產業轉型</strong>
-                <p>聲優不再只是配音員，更可能成為 <strong>語氣訓練師</strong>、「<strong>模組監修者</strong>」，擁有可重複授權與分潤的個人語氣資產。</p>
-            </li>
-            <li><strong>語氣平台與模組市場崛起</strong>
-                <p>開發者、創作者與消費者之間，將出現角色語氣的設計、販售與應用的多邊市場。</p>
-            </li>
-        </ul>
+        <section>
+            <h2>導言</h2>
+            <p>本頁為 MAOP Phase I 的研究備忘。僅展示目前可公開的結構輪廓；所有仍在驗證中的設計與細節，暫不公開。內容將依研究進展逐步補充。</p>
+        </section>
 
-        <h2>🛠 我們正在思考與預研的方向：</h2>
-        <ul>
-            <li>建立語氣模組的描述標準與分類系統</li>
-            <li>提出「語氣訓練師」的新職能角色與協作流程</li>
-            <li>設計角色語氣模組的市場交換機制</li>
-            <li>探索聲優、創作者與平台三方之間的授權與分潤模式</li>
-            <li>搭配 多 AI 協作架構（MAOP），擴展至劇本生成、角色語音同步等應用場景</li>
-        </ul>
+        <section>
+            <h2>目前可公開的結構</h2>
+            <ul>
+                <li><strong>Control Panel：</strong>目前的操作面板，用於發送指令與觀測回饋。</li>
+                <li><strong>Conversation Control Layer：</strong>承接來自 Key User 的指令，並維持對話狀態；內含多個控制項以設定對話情境與流程。</li>
+                <li><strong>Modules Hub：</strong>為後續模組化實驗預留的接口位置；Phase I 僅顯示結構，不展開功能。</li>
+                <li><strong>AI Proxy（直連／代理）：</strong>兩種對接模式，用於連接不同 AI 模型；本階段僅驗證其切換與傳遞能力。</li>
+                <li><strong>AI Model：</strong>目前對接 ChatGPT、Gemini、Copilot 三大模型。</li>
+                <li>
+                    <strong>Key User：</strong>
+                    <ul>
+                        <li><strong>AI Coordinator (AIC)：</strong>負責下達指令與掌握對話回合節奏。</li>
+                        <li><strong>AI Tone Trainer (ATT)：</strong>負責語氣與表述的微調。</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <img src="images/MAOP_Architecture_PH1 Release.png" />
+        <section>
+            <h2>研究範圍聲明（Phase I）</h2>
+            <p>目前僅進行「指令 → 控制層 → 代理／直連 → 模型」的基本通路觀察與驗證。</p>
+            <p>不涉及：模組內部機制、跨場景自動化、應用層設計或營運相關描述。</p>
+        </section>
 
-        <h2>📁 我們已完成的準備：</h2>
-        <p>雖然目前僅釋出概念雛型與模組化語音技術現況概覽，我們已將相關技術架構、商模草圖與討論記錄整理於內部專案資料庫。</p>
-        <p>當未來產業發展成熟至關鍵節點，我們將視情況逐步公開或主動對接潛在合作方。</p>
+        <section>
+            <h2>更新節點</h2>
+            <ul>
+                <li><strong>Phase I（目前）：</strong>公開結構輪廓與基本通路。</li>
+                <li><strong>下一版：</strong>補充觀測筆記，不含任何模組細節。</li>
+            </ul>
+        </section>
 
-        <p style="text-align: center; font-style: italic; color: #7f8c8d; margin-top: 3em;"><strong>有些願景，不必急著實現，但必須現在就準備好。</strong></p>
-        <p style="text-align: center; font-style: italic; color: #7f8c8d;"><strong>有些藍圖，放在雲端就好，等世界自己來解鎖。</strong></p>
+        <section>
+            <h2>聯絡方式</h2>
+            <p>研究交流請聯繫：<a href="mailto:contact@pma.tw">contact@pma.tw</a></p>
+        </section>
     </div>
 </body>
 </html>
